@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    web.xml — Servlet 3.1 deployment descriptor.
+
+    Jersey's @ApplicationPath annotation is enough to register the
+    servlet automatically on any Servlet 3 container (Tomcat 8+).
+    This file is kept here only because Apache NetBeans uses its
+    presence to confirm the project is a Java Web Application and to
+    enable the "Run Project" → deploy-to-Tomcat workflow in the IDE.
+
+    If you want to change the context root at deploy time, do it via:
+      Project Properties → Run → Context Path
+    in NetBeans instead of editing this file.
+-->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Smart Campus API</display-name>
+
+    <!--
+        No servlet registration needed here.
+        Jersey detects SmartCampusApplication (annotated with
+        @ApplicationPath("/api/v1")) via the Servlet 3 SCI mechanism
+        and registers its own dispatcher servlet automatically.
+    -->
+
+</web-app>
